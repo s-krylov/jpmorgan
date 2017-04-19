@@ -1,0 +1,9 @@
+=========SalesPerProductReport=========
+product = cucumber, price = 4, occurrences = 33
+product = coffee beans, price = 50, occurrences = 100
+product = bread, price = 1, occurrences = 1
+total price = 55
+========================================
+========================================
+========================================
+

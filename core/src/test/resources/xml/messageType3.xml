@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xmlns="http://jp.morgan/banking"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://jp.morgan/banking entities.xsd">
+    <messageType3>
+        <details>
+            <productType>banana</productType>
+            <value>4</value>
+        </details>
+        <operation>
+            <operation>add</operation>
+            <amount>10</amount>
+        </operation>
+    </messageType3>
+</Message>

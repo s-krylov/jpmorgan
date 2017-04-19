@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://jp.morgan/banking"
+           xmlns="http://jp.morgan/banking entities.xsd"
+           xmlns:tns="http://jp.morgan/banking"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="Message">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:element name="messageType1" type="tns:MessageType1"/>
+                <xs:element name="messageType2" type="tns:MessageType2"/>
+                <xs:element name="messageType3" type="tns:MessageType3"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="MessageType1">
+        <xs:sequence>
+            <xs:element name="details" type="tns:Sale"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MessageType2">
+        <xs:sequence>
+            <xs:element name="details" type="tns:Sale"/>
+            <xs:element name="occurrences" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MessageType3">
+        <xs:sequence>
+            <xs:element name="details" type="tns:Sale"/>
+            <xs:element name="operation" type="tns:AdjustmentOperation"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Sale">
+        <xs:sequence>
+            <xs:element name="productType" type="xs:string"/>
+            <xs:element name="value" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="AdjustmentOperation">
+        <xs:sequence>
+            <xs:element name="operation" type="tns:OperationEnum"/>
+            <xs:element name="amount" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="OperationEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="add"/>
+            <xs:enumeration value="subtract"/>
+            <xs:enumeration value="multiply"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

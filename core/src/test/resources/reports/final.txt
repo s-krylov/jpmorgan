@@ -1,0 +1,27 @@
+=========SalesPerProductReport=========
+product = apple, price = 20, occurrences = 1
+total price = 20
+========================================
+========================================
+========================================
+=========SalesPerProductReport=========
+product = apple, price = 20, occurrences = 1
+product = banana, price = 1000, occurrences = 100
+total price = 1020
+========================================
+========================================
+========================================
+=========SalesPerProductReport=========
+product = apple, price = 20, occurrences = 1
+product = banana, price = 2014, occurrences = 101
+total price = 2034
+========================================
+========================================
+========================================
+============AdjustmentReport============
+product = banana, operation = ADD, operand = 10
+========================================
+========================================
+========================================
+Maximum processed messages achieved
+

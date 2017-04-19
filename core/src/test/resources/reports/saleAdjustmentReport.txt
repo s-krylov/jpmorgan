@@ -1,0 +1,7 @@
+============AdjustmentReport============
+product = apple, operation = SUBTRACT, operand = 12
+product = orange, operation = MULTIPLY, operand = 3
+========================================
+========================================
+========================================
+
